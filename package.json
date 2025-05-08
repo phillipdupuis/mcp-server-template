@@ -1,0 +1,41 @@
+{
+  "name": "@pdupuis/mcp-server-template",
+  "version": "0.0.0",
+  "description": "A template repository for creating MCP servers with TypeScript",
+  "keywords": [
+    "mcp"
+  ],
+  "license": "MIT",
+  "author": "Phillip Dupuis",
+  "type": "module",
+  "main": "dist/server.js",
+  "module": "dist/server.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rolldown -c rolldown.config.ts",
+    "test": "node --import=tsx --test \"src/**/*test.ts\"",
+    "add-to-claude-desktop": "node --import tsx scripts/add-to-claude-desktop.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^1.2.16",
+    "@standard-schema/spec": "^1.0.0",
+    "@standard-schema/utils": "^0.3.0",
+    "buffer": "^6.0.3",
+    "env-paths": "^3.0.0",
+    "execa": "^9.5.2",
+    "fastmcp": "^1.24.0",
+    "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "picocolors": "^1.1.1",
+    "rolldown": "1.0.0-beta.8",
+    "rolldown-plugin-dts": "^0.10.1",
+    "rollup-plugin-copy": "^3.5.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
